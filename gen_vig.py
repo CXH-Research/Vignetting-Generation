@@ -26,7 +26,7 @@ def apply_vignetting(inp, mask):
 
 # Load an image and convert it to a PyTorch tensor
 image_path = './input.png'
-image = Image.open(image_path)
+image = Image.open(image_path).convert('RGB')
 image_tensor = to_tensor(image)
 
 # Create a vignette mask and apply it to the image tensor
